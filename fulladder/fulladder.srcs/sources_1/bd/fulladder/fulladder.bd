@@ -1,0 +1,171 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5ADE94505ADE945",
+      "device": "xc7a35ticpg236-1L",
+      "name": "fulladder",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2"
+    },
+    "design_tree": {
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "test_0": "",
+      "test_1": "",
+      "test_2": ""
+    },
+    "ports": {
+      "sum": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "cout": {
+        "direction": "O"
+      },
+      "a": {
+        "direction": "I"
+      },
+      "cin": {
+        "direction": "I"
+      },
+      "b": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "fulladder_util_vector_logic_0_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "xor"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "fulladder_util_vector_logic_0_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "xor"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "test_0": {
+        "vlnv": "xilinx.com:module_ref:test:1.0",
+        "xci_name": "fulladder_test_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "test",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I"
+          },
+          "B": {
+            "direction": "I"
+          },
+          "Z": {
+            "direction": "O"
+          }
+        }
+      },
+      "test_1": {
+        "vlnv": "xilinx.com:module_ref:test:1.0",
+        "xci_name": "fulladder_test_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "test",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I"
+          },
+          "B": {
+            "direction": "I"
+          },
+          "Z": {
+            "direction": "O"
+          }
+        }
+      },
+      "test_2": {
+        "vlnv": "xilinx.com:module_ref:test:1.0",
+        "xci_name": "fulladder_test_1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "test",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I"
+          },
+          "B": {
+            "direction": "I"
+          },
+          "Z": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "util_vector_logic_0/Op1",
+          "test_1/A"
+        ]
+      },
+      "test_2_Z": {
+        "ports": [
+          "test_2/Z",
+          "test_0/B"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "b",
+          "test_2/B",
+          "util_vector_logic_1/Op2"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "a",
+          "test_2/A",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "sum"
+        ]
+      },
+      "test_0_Z": {
+        "ports": [
+          "test_0/Z",
+          "cout"
+        ]
+      },
+      "cin_1": {
+        "ports": [
+          "cin",
+          "test_1/B",
+          "util_vector_logic_0/Op2"
+        ]
+      }
+    }
+  }
+}

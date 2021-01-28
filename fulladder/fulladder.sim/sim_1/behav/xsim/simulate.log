@@ -1,0 +1,17 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Starting Test
+Cin A B = 000, {Cout, Sum} = 01, real sum = 00
+Error, {Cout, Sum} should be 00, is 01
+Cin A B = 001, {Cout, Sum} = 00, real sum = 01
+Error, {Cout, Sum} should be 01, is 00
+Cin A B = 010, {Cout, Sum} = 00, real sum = 01
+Error, {Cout, Sum} should be 01, is 00
+Cin A B = 011, {Cout, Sum} = 11, real sum = 10
+Error, {Cout, Sum} should be 10, is 11
+Cin A B = 100, {Cout, Sum} = 01, real sum = 01
+Cin A B = 101, {Cout, Sum} = 11, real sum = 10
+Error, {Cout, Sum} should be 10, is 11
+Cin A B = 110, {Cout, Sum} = 11, real sum = 10
+Error, {Cout, Sum} should be 10, is 11
+Cin A B = 111, {Cout, Sum} = 11, real sum = 11
